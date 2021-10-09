@@ -42,3 +42,14 @@ body{
     padding: 10px;
 }
 
+#discografia{
+    background-color: rgb(17, 17, 17);
+    color: ivory;
+    justify-content: center;
+}
+
+#tabla{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
