@@ -1,6 +1,7 @@
 .container{
     display:flexbox;
     padding: 10px;
+    text-overflow: ellipsis;
 }
 
 
