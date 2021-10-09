@@ -1,0 +1,27 @@
+.container{
+    display:flexbox;
+}
+
+
+.titulo{
+    background-color: black;
+    color: rgb(226, 226, 226);
+    text-align: center;
+    float: left;
+}
+
+.imagen2{
+    background-color: black;
+
+}
+
+#texto2{
+    text-align: center;
+    background-color: black;
+    color: rgb(250, 250, 250);
+}
+
+#texto3{
+    text-align: justify;
+    padding: 1px;
+}
