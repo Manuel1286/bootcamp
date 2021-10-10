@@ -53,8 +53,14 @@ body{
     padding: 10px;
     margin: 10px;
     text-align: center;
+
 }
 
 #textodis{
     text-align: justify;
+
+}
+
+#centrar{
+    padding-top: 130px;
 }
