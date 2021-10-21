@@ -92,8 +92,8 @@ function caracteres() {
     var nombre = document.getElementById("input_carateres").value;
     var caracteres = nombre.length;
     alert(caracteres);
-    document.getElementById("res_carac").innerHTML = "visualizar carateres es: " +caracteres;
-    
+    document.getElementById("res_carac").innerHTML = "visualizar carateres es: " + caracteres;
+
 }
 ///////boton gatillo ////////
 var nombre_contar = document.getElementById("btn_carateres");
@@ -107,32 +107,51 @@ var boton_may = document.getElementById("boton_letras");
 boton_may.addEventListener("click", function () {
     ocul_resultado();
     document.getElementById("div_Mayusculas_&_Minusculas").style.display = "block";
+
 });
-    
+
 /* funcion logica convertir a mayu & minus*/
 
-function datos (){
+function datos() {
+    var texto = document.getElementById("input_letra");
+    texto = texto.toUpperCase();
+    texto = texto.toLowerCase();
 
-    var texto=document.getElementById("input_mayusculas").value;
-    alert(texto);
-    var texto_mayuscula=texto.toUpperCase();
-    var texto_miniscula=texto.toLowerCase();
-    document.getElementById("resltado_letra").innerText="la palabra ingresada es:  "+texto_mayuscula+" "+texto_miniscula;
 }
 
-////////boton garillo ///
 
-var btn_letra=document.getElementById("btn_mayuscula");
-btn_letra.document.addEventListener("click", function(){
-    datos();
+var btn_letra = document.getElementById("btn_mayuscula");
+btn_letra.document.addEventListener("click", function () {
+    var a=document.getElementById("input_mayusculas").value;
+    var b=a.toUpperCase();
+    var c=a.toLowerCase();
+    document.getElementById("r_letra").innerHTML="la palabra es: "+c
 });
 
 
 //////////////////////////////////SUMATORIA DE NUMEROS ///////////////////////////////
 
-var boton_suma = document.getElementById("boton_sumatoria");
-boton_suma.addEventListener("click", function () {
+var boton_sumatoria = document.getElementById("boton_sumatoria");
+boton_sumatoria.addEventListener("click", function () {
     ocul_resultado();
     document.getElementById("div_sumatoria").style.display = "block";
 
 });
+
+///boton
+
+var btnSum = document.getElementById("");
+btnSum = addEventListener("click", function() {
+    var f = document.getElementById("sum").value;
+    Sumatoria();
+})
+
+///////logica /////
+function Sumatoria() {
+    var num3 = document.getElementById("btnsuma").value;
+    var res = 0;
+    for (var i = 1; i <= num3; i++) {
+        res = res + i;
+    }
+    document.getElementById("resSum").innerText = res;
+}
