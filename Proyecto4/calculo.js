@@ -67,27 +67,17 @@ function division(a, b) {
 
 ////////////////////////////////MULTIPLICACION///////////////////////////////
 
+var multiplicacion_calc = document.getElementById("multiplicacion");
+multiplicacion_calc.addEventListener("click", function () {
+    multiplicacion();
+});
 
-
-
-
-
-/* function division(a,b){ */
-/*     var numer1=document.getElementById("numero1").value; */
-/*     var numer2=document.getElementById("numero2").value;     */
-/*  */
-/*    if(b!=0){ resultado=parseInt(a)/parseInt(b); */
-/*     return res4; */
-/*  */
-/* }else{ */
-/*     return "no se puede dividir por 0"; */
-/* } */
-/* } */
-/* resultado= division(numer1,numer2); */
-/* alert(resultado); */
-/*  */
-
-
+function multiplicacion(a, b) {
+    var numer1 = document.getElementById("numero1").value;
+    var numer2 = document.getElementById("numero2").value;
+    var resultado = parseInt(numer1) * parseInt(numer2);
+    document.getElementById("res").innerHTML = "el resultado es:  " + resultado;
+}
 //////////////////////////////////CONTAR CARACTERES////////////////////////////////////////
 /* boton menu */
 var boton_carac = document.getElementById("boton_caracteres");
@@ -124,10 +114,10 @@ boton_may.addEventListener("click", function () {
 function datos (){
 
     var texto=document.getElementById("input_mayusculas").value;
-    alert();
+    alert(texto);
     var texto_mayuscula=texto.toUpperCase();
     var texto_miniscula=texto.toLowerCase();
-    document.getElementById("resltado_letra").innerHTML="la palabra ingresada es:  "+texto_mayuscula+" "+texto_miniscula;
+    document.getElementById("resltado_letra").innerText="la palabra ingresada es:  "+texto_mayuscula+" "+texto_miniscula;
 }
 
 ////////boton garillo ///
