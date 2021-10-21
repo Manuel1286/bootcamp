@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="calculo.js"></script>
     <script type="text/java"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -31,12 +33,9 @@
                 </div>
             </div>
         </section>
-
         <!-- CALCULADORA -->
-
         <div class="album py-1 bg-light">
             <div class="container">
-
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
@@ -49,15 +48,10 @@
                             </svg>
                             <div class="card-body">
                                 <p class="card-text">realice las operaciones matematicas </p>
-                                <div><input type="numero1" width="3px"></div>
-                                <div><input type="numero2" width="3px"></div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"
-                                            id="boton_calculadora">calculadora </button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" id="boton_calculadora">calculadora </button>
                                     </div>
-
-                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
@@ -76,19 +70,14 @@
                                 <p class="card-text">
                                     Ingrese sus caracteres y valide su longitud
                                 </p>
-                                <div><input type="numero1" width="3px"></div>
-                                <div><input type="numero2" width="3px"></div>                                
-                                <button type="button" class="btn btn-sm btn-outline-secondary"
-                                    id="boton_caracteres">contar
-                                    caracteres</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="boton_caracteres">contar caracteres</button>
                                 <div class="d-flex justify-content-between align-items-center">
                                 </div>
-                                <small class="text-muted">9 mins</small>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Mayusculas & Minusculas -->
+                <!-- MAYUSCULAS & MINUSCULAS -->
                 <div class="album py-5 bg-light">
                     <div class="container">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -100,24 +89,21 @@
                                         focusable="false">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#55595c" /><text x="20%" y="50%"
-                                            fill="#eceeef" dy=".3em">MAYUSCULAS & MINUSCULAS</text>
+                                            fill="#eceeef" dy=".3em">Mayusculas & Minusculas</text>
                                     </svg>
                                     <div class="card-body">
                                         <p class="card-text">Cambie una cadena de caracteres a mayúsculas o minúsculas
                                             según lo requiera </p>
-                                            <div><input type="numero1" width="3px"></div>
-                                            <div><input type="numero2" width="3px"></div>                                            
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-sm btn-outline-secondary"
                                                     id="boton_letras">Mayusculas & Minisculas</button>
                                             </div>
-                                            <small class="text-muted">9 mins</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- sumatoria de Numeros -->
+                            <!-- SUMATORIA DE NUMEROS -->
                             <div class="col">
                                 <div class="card shadow-sm">
                                     <svg class="bd-placeholder-img card-img-top" width="100%" height="125"
@@ -126,19 +112,16 @@
                                         focusable="false">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#55595c" /><text x="20%" y="50%"
-                                            fill="#eceeef" dy=".3em">SUMATORIA DE NUMEROS</text>
+                                            fill="#eceeef" dy=".3em">Sumatoria de Numeros</text>
                                     </svg>
                                     <div class="card-body">
                                         <p class="card-text">
                                             Digite sus números para calcular la sumatoria
                                         </p>
-                                        <div><input type="numero1" width="3px"></div>
-                                        <div><input type="numero2" width="3px"></div>                                        
                                         <button type="button" class="btn btn-sm btn-outline-secondary"
                                             id="boton_sumatoria">Ingresar</button>
                                         <div class="d-flex justify-content-between align-items-center">
                                         </div>
-                                        <small class="text-muted">9 mins</small>
                                     </div>
                                 </div>
                             </div>
@@ -147,28 +130,38 @@
                 </div>
             </div>
         </div>
+        <!-- RESULTADO -->
         <div class="resultado">
             <div class="row">
-                <div class="div_resultado" id="div_calculadora"><input>resultado_calculadora</input></div>
-                <div class="div_resultado" id="div_contar_caracteres">
-                    <input type="text" Placeholder="ingresar caracteres">
-                    <button id="boton_caracteres">caracteres</button>
-                    <h4 id="resultado_caracteres">resultado</h4>
-                    
-                
-                
-                
-                
-                
-                </input>
-
-                
-                
-                
-                
+                <div class="div_resultado" id="div_calculadora">
+                    <input type="text" id="numero1">
+                    <input type="text" id="numero2">
+                    <button id="suma" type="button" class="btn btn-primary">+</button>
+                    <h4 id="res">resultado</h4>
+                    <button id="resta" type="button" class="btn btn-secondary">-</button>
+                    <h4 id="res">resultado</h4>
+                    <button id="division" type="button" class="btn btn-success">/</button>
+                    <h4 id="res">resultado</h4>
+                    <button id="multiplicacion" type="button" class="btn btn-danger">*</button>
+                    <h4 id="res">resultado</h4>
                 </div>
-                <div class="div_resultado" id="div_Mayusculas_&_Minusculas"><input>resultado_Mayusculas_&_Minusculas</input></div>
-                <div class="div_resultado" id="div_sumatoria"><input>resultado_sumatoria</input></div>
+
+                <!-- CARECTERES -->
+                <div class="div_resultado" id="div_contar_caracteres">
+                    <input id="input_carateres" type="text">
+                    <button id="btn_carateres">calcular</button>
+                    <h4 id="res_carac">resultado</h4>
+                    </div>
+                <!--MAYUSCULAS Y MINISCULAS --> 
+                <div class="div_resultado" id="div_Mayusculas_&_Minusculas">
+                    <input type="text" id="input_mayusculas">
+                    <button id="btn_mayuscula">convertir</button>
+                    <h4 id="resltado_letra" >resultado</h4>
+                </div>
+                <div class="div_resultado" id="div_sumatoria">
+                    <input type="text" id="input_letra">
+                    <button id="btn_letra"></button>
+                </div>
             </div>
             </main>
             <footer class="text-muted py-5">
