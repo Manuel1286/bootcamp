@@ -113,21 +113,19 @@ boton_may.addEventListener("click", function () {
 /* funcion logica convertir a mayu & minus*/
 
 function datos() {
-    var texto = document.getElementById("input_letra");
-    texto = texto.toUpperCase();
-    texto = texto.toLowerCase();
+    var texto = document.getElementById("input_mayusculas").value;
+    var texto1 = texto.toUpperCase();
+    var texto2 = texto.toLowerCase();
+    document.getElementById("r_letra").innerText = "La palabra es:" + texto1 + " y " + texto2;
 
 }
 
+///boton
 
 var btn_letra = document.getElementById("btn_mayuscula");
 btn_letra.document.addEventListener("click", function () {
-    var a=document.getElementById("input_mayusculas").value;
-    var b=a.toUpperCase();
-    var c=a.toLowerCase();
-    document.getElementById("r_letra").innerHTML="la palabra es: "+c
+    document.getElementById("r_letra").innerHTML="la palabra es: "+c;
 });
-
 
 //////////////////////////////////SUMATORIA DE NUMEROS ///////////////////////////////
 
@@ -138,20 +136,22 @@ boton_sumatoria.addEventListener("click", function () {
 
 });
 
-///boton
-
-var btnSum = document.getElementById("");
-btnSum = addEventListener("click", function() {
-    var f = document.getElementById("sum").value;
-    Sumatoria();
-})
 
 ///////logica /////
+
 function Sumatoria() {
-    var num3 = document.getElementById("btnsuma").value;
+    var num3 = document.getElementById("inpt_suma").value;
     var res = 0;
     for (var i = 1; i <= num3; i++) {
         res = res + i;
     }
-    document.getElementById("resSum").innerText = res;
+    document.getElementById("ressum").innerText = res;
 }
+
+///boton
+
+var btnSum = document.getElementById("btnsuma");
+btnSum = addEventListener("click", function() {
+    var Sumatoria = document.getElementById("sum").value;
+    Sumatoria();
+})
