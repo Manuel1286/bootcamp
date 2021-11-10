@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ejercicio/estilo.css"><!-- ingresar el archivo ccs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="variables.js"></script>
+</head>
+
+<style>
+
+#formulario{
+    display: none;
+}
+
+
+</style>
+
+<body>
+
+    <!-- PLANTILLA DE VALIDACION DE USUARIO Y CONTRASEÑA-->
+
+    <div class="contenedor">
+
+        <div class="caja1">
+            <img id="imagen1"
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRAiNZzQqw5hwaWyZX3-KPG5gBHcMkjqPB6KtIakiiY56snwjgt"
+                alt="logo faceboock" width="400px" height="99px">
+
+        </div>
+
+        <div class="caja2">
+
+            <img id="imagen2" src="../ejercicio/LOGO.FCK.PNG" alt="logo faceboock">
+
+
+        </div>
+
+        <!-- PASO1 LOGIN (CORREO Y CONTRASEÑA )-->
+
+        <div class="caja3" id="registro">
+            <input id="input_Correo" type="email" placeholder="Correo electronico o numero de telefono" width="300px">
+            <input id="input_Contrasena" type="Password" placeholder="Contraseña">
+            <button id="bnt_Iniciar">Iniciar Sesión </button>
+            <h4 id="olvido_contrasena">¿Olvidaste Tu Contraseña?</h4>
+            <button id="crear_cuenta">Crear cuenta nueva</button>
+            <h4 id="mensaje_de_celebridad">Crea una página para una celebridad, una marca o un negocio.</h4>
+        </div>
+
+        <div class="caja4" id="formulario">
+            <input id="input_formulario1" type="text" placeholder="Nombre" width="300px">
+            <input id="input_formulario1" type="text" placeholder="Apellidos">
+            <input id="input_formulario1" type="text" placeholder="Numero de celular o Correo Electronico" width="300px">
+            <input id="input_formulario1" type="text" placeholder="fecha de Nacimiento" width="300px">
+            <input id="input_formulario1" type="text" placeholder="Sexo" width="300px">
+            <h3>Realizar Registro</h3>
+           <button id="regresar"> Aceptar</button>
+        </div>
+        
+    </div>
+
+</body>
